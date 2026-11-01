@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boostllm-anemia"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["pandas", "numpy", "scikit-learn", "xgboost", "shap", "scipy", "pyyaml", "pyreadstat"]
+
+[project.optional-dependencies]
+llm = ["torch", "transformers", "peft", "accelerate"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

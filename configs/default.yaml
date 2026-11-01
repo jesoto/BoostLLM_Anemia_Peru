@@ -1,0 +1,13 @@
+seed: 42
+rounds: [2021, 2022, 2023]
+age_months: [6, 59]
+test_size: 0.2
+# Cortes en g/dL (OMS 2024, Tabla 2).
+hb_cutoffs:
+  "6-23": 10.5
+  "24-59": 11.0
+altitude_equation: who2024      # o legacy_cdc para la etiqueta antigua
+uncertainty_band: [0.35, 0.65]  # zona de incertidumbre de XGBoost para el ruteo
+medgemma:
+  model_id: google/medgemma-1.5-4b-it
+  temperature: 0.2
